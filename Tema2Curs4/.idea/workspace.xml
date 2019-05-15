@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93f46d51-9590-4cc5-bd1b-ac4e9a8b1f75" name="Default Changelist" comment="" />
+    <list default="true" id="93f46d51-9590-4cc5-bd1b-ac4e9a8b1f75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/config/SpringJDBCConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/DepartmentJoinEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/DepartmentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/DepartmentJoinEmployeeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/EmployeeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/DepartmentJoinEmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/repository/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/repository/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exemplu4/src/main/java/com/example/exemplu4/service/TransactionService.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,12 +36,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="751">
-              <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+            <state relative-caret-position="1155">
+              <caret line="73" column="57" lean-forward="true" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,8 +169,6 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
@@ -199,7 +219,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.2526475" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.24508321" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.20121029" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -374,8 +394,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+        <state relative-caret-position="1155">
+          <caret line="73" column="57" lean-forward="true" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
