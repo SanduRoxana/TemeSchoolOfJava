@@ -29,28 +29,22 @@ public class MovieRepository {
     }
 
     public Movie getById(int id) {
-        if(existId(id).equals("Yes")) {
-            for(Movie movie : movieMessage.getMovies()) {
-                if(movie.getId() == id) {
-                    return movie;
-                }
+        for(Movie movie : movieMessage.getMovies()) {
+            if (movie.getId() == id) {
+                return movie;
             }
-        } else {
-            System.out.println("Movie with id = " + id + " doesn't exist!");
         }
 
         return null;
     }
 
-    public void updateMovie(int id, int rating) {
-        if(existId(id).equals("Yes")) {
-            for(Movie movie : movieMessage.getMovies()) {
-                if(movie.getId() == id) {
-                    movie.setRating(rating);
-                }
+    public void updateMovie(Movie movie) {
+        for(Movie m : movieMessage.getMovies()) {
+            if(m.getId() == movie.getId()) {
+                m.setTitle(movie.getTitle());
+                m.setGenre(movie.getGenre());
+                m.setRating(movie.getRating());
             }
-        } else {
-            System.out.println("Movie with id = " + id + " doesn't exist!");
         }
     }
 
@@ -73,18 +67,6 @@ public class MovieRepository {
         }
 
         return maxId;
-    }
-
-    private String existId(int id) {
-        String exist = "No";
-
-        for(int i : getIdList()) {
-            if(i == id) {
-                exist = "Yes";
-            }
-        }
-
-        return exist;
     }
 
     private List<Integer> getIdList() {

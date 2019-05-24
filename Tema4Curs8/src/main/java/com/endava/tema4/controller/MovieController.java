@@ -5,7 +5,6 @@ import com.endava.tema4.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -15,9 +14,8 @@ public class MovieController {
     private MovieService movieService;
 
     @PostMapping(path = "/addMovie")
-    public void add(@RequestParam String title, @RequestParam String genre, @RequestParam int rating,
-                    HttpServletResponse response) {
-        movieService.add(title, genre, rating, response);
+    public void add(@RequestParam String title, @RequestParam String genre, @RequestParam int rating) {
+        movieService.add(title, genre, rating);
     }
 
     @GetMapping(path = "/getAllMovies")
@@ -26,13 +24,13 @@ public class MovieController {
     }
 
     @GetMapping(path = "/getById/{id}")
-    public Movie getById(@PathVariable int id, HttpServletResponse response) {
-        return movieService.getById(id, response);
+    public Movie getById(@PathVariable int id) {
+        return movieService.getById(id);
     }
 
-    @PutMapping(path = "/update/{id}")
-    public void update(@PathVariable int id, @RequestParam int rating, HttpServletResponse response) {
-        movieService.update(id, rating, response);
+    @PutMapping(path = "/updateMovie")
+    public void update(@RequestBody Movie movie) {
+        movieService.update(movie);
     }
 
     @DeleteMapping(path = "/deleteAllMovies")

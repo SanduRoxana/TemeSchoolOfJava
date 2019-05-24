@@ -1,7 +1,6 @@
 package com.example.exemplu6.repository;
 
 import com.example.exemplu6.model.Movie;
-import org.hibernate.validator.constraints.URL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Map;
 
 @Repository
 public class MovieRepository {
@@ -36,36 +34,19 @@ public class MovieRepository {
     public Movie getById(int id) {
         String query = "SELECT * FROM movie WHERE id = ?";
 
-        if(existId(id).equals("Yes")) {
-            return jdbcTemplate.queryForObject(query, new MovieRowMapper(), id);
-        } else {
-            System.out.println("Movie with id = " + id + " doesn't exist in database!");
-            return null;
-        }
+        return jdbcTemplate.queryForObject(query, new MovieRowMapper(), id);
     }
 
-    public int updateMovie(int id, int rating) {
-        String query = "UPDATE movie SET rating = ? where id = ?";
+    public int updateMovie(Movie movie) {
+        String query = "UPDATE movie SET title = ?, genre = ?, rating = ? where id = ?";
 
-        if(existId(id).equals("Yes")) {
-            System.out.println("Movie with id = " + id + " updated!");
-            return jdbcTemplate.update(query, rating, id);
-        } else {
-            System.out.println("Movie with id = " + id + " doesn't exist in database!");
-            return 0;
-        }
+        return jdbcTemplate.update(query, movie.getTitle(), movie.getGenre(), movie.getRating(), movie.getId());
     }
 
     public int deleteMovie(int id) {
         String query = "DELETE FROM movie WHERE id = ?";
 
-        if(existId(id).equals("Yes")) {
-            System.out.println("Movie with id = " + id + " deleted!");
-            return jdbcTemplate.update(query, id);
-        } else {
-            System.out.println("Movie with id = " + id + " doesn't exist in database!");
-            return 0;
-        }
+        return jdbcTemplate.update(query, id);
     }
 
     private int getMaxId() {
@@ -91,17 +72,11 @@ public class MovieRepository {
         return jdbcTemplate.queryForList(query, Integer.class);
     }
 
-    private String existId(int id) {
-        String exist = "No";
-
-        for(int i : getIdList()) {
-            if(i == id) {
-                exist = "Yes";
-            }
-        }
-
-        return exist;
-    }
+//    private boolean existId(int id) {
+//        String query = "SELECT id FROM movie";
+//
+//        return jdbcTemplate.queryForList(query, Integer.class).contains(id);
+//    }
 
     protected class MovieRowMapper implements RowMapper<Movie> {
         @Override

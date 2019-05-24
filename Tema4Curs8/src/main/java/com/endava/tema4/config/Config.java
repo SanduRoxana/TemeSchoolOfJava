@@ -64,8 +64,8 @@ public class Config {
         return jmsTemplate;
     }
 
-    @Bean
-    public MovieMessage movieMessage() {
-        return new MovieMessage();
-    }
+//    @Bean
+//    public MovieMessage movieMessage() {
+//        return new MovieMessage();
+//    }
 }

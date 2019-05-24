@@ -1,8 +1,11 @@
 package com.endava.tema4.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class MovieMessage {
     private List<Movie> movies = new ArrayList<>();
 
